@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Sale</title>
+  <desc id="desc">Illustration representing sale of property.</desc>
+  <rect width="640" height="420" fill="#eef4f8"/>
+  <rect x="55" y="75" width="230" height="260" rx="12" fill="#ffffff"/>
+  <rect x="95" y="125" width="150" height="130" fill="#dfe7c9"/>
+  <rect x="355" y="120" width="220" height="210" rx="12" fill="#f6f4ef"/>
+  <polygon points="355,120 468,45 575,120" fill="#dce8f7"/>
+  <rect x="390" y="155" width="150" height="120" fill="#dfe9d8"/>
+  <circle cx="180" cy="85" r="24" fill="#ffd28a"/>
+  <text x="200" y="350" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1d5f24">Venta</text>
+</svg>

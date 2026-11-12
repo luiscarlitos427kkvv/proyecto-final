@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Property 1</title>
+  <desc id="desc">Illustration of a family home.</desc>
+  <rect width="640" height="420" fill="#eef5f6"/>
+  <rect y="260" width="640" height="160" fill="#c7e2bf"/>
+  <rect x="105" y="150" width="230" height="170" rx="10" fill="#ffffff"/>
+  <polygon points="105,150 220,80 335,150" fill="#dce9f8"/>
+  <rect x="150" y="190" width="65" height="90" fill="#d3e0ec"/>
+  <rect x="240" y="190" width="65" height="90" fill="#d9eac9"/>
+  <rect x="380" y="110" width="160" height="210" rx="8" fill="#f8f5ef"/>
+  <rect x="405" y="150" width="110" height="110" fill="#dfe9d2"/>
+  <text x="165" y="375" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d5f24">Casa Orlando</text>
+</svg>

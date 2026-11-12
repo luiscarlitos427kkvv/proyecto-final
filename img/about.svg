@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+  <title id="title">About Jess</title>
+  <desc id="desc">Portrait illustration of Jess.</desc>
+  <rect width="640" height="520" fill="#f3f6f8"/>
+  <circle cx="320" cy="175" r="110" fill="#f5d5b5"/>
+  <rect x="235" y="265" width="170" height="170" rx="30" fill="#dfe9d2"/>
+  <rect x="260" y="128" width="120" height="70" rx="35" fill="#1d5f24"/>
+  <circle cx="285" cy="175" r="8" fill="#2b2b2b"/>
+  <circle cx="355" cy="175" r="8" fill="#2b2b2b"/>
+  <path d="M290 200 Q320 220 350 200" stroke="#2b2b2b" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="185" y="470" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1d5f24">Jess</text>
+</svg>

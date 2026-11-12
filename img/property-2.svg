@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Property 2</title>
+  <desc id="desc">Illustration of a modern apartment.</desc>
+  <rect width="640" height="420" fill="#edf3fa"/>
+  <rect x="80" y="80" width="220" height="240" rx="12" fill="#ffffff"/>
+  <rect x="100" y="100" width="180" height="160" fill="#dfe8ce"/>
+  <rect x="130" y="130" width="55" height="100" fill="#ffffff"/>
+  <rect x="200" y="130" width="55" height="100" fill="#ffffff"/>
+  <rect x="360" y="120" width="180" height="200" rx="10" fill="#f7f2e8"/>
+  <polygon points="360,120 450,60 540,120" fill="#dfeaf7"/>
+  <rect x="395" y="155" width="110" height="110" fill="#dfe9d8"/>
+  <text x="180" y="370" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d5f24">Departamento</text>
+</svg>

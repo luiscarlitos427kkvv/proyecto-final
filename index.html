@@ -1,569 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FL Homes by Jess | Tu Casa en Orlando</title>
-  <meta name="description" content="FL Homes by Jess - REALTOR® independiente en Orlando, Florida. Compra, venta y renta de propiedades.">
-  <style>
-    /* ========================================
-       FL HOMES BY JESS - Estilos globales
-       ======================================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --primario: #2e7d32;
-      --primario-oscuro: #1b5e20;
-      --secundario: #1a237e;
-      --fondo: #f8f9fa;
-      --blanco: #ffffff;
-      --texto: #333333;
-      --texto-suave: #666666;
-      --borde: #dddddd;
-      --whatsapp: #25d366;
-      --sombra: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: var(--texto);
-      background: var(--fondo);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Botones */
-    .btn, button.btn {
-      display: inline-block;
-      padding: 12px 28px;
-      background: var(--primario);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      text-align: center;
-    }
-
-    .btn:hover {
-      background: var(--primario-oscuro);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--primario);
-      color: var(--primario);
-    }
-
-    .btn-outline:hover {
-      background: var(--primario);
-      color: #fff;
-    }
-
-    /* Header */
-    header {
-      background: var(--blanco);
-      box-shadow: var(--sombra);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--primario);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-weight: 600;
-      color: var(--texto);
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primario);
-    }
-
-    /* Botón flotante WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background: var(--whatsapp);
-      color: #fff;
-      padding: 14px 20px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-      z-index: 999;
-      font-weight: 700;
-      font-size: 0.95rem;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-      70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    /* Hero section */
-    .hero {
-      height: 70vh;
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                  url('./img/img1.jpeg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-
-    .hero-content p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    }
-
-    /* Secciones genéricas */
-    section {
-      padding: 80px 0;
-    }
-
-    .titulo-seccion {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      color: var(--secundario);
-    }
-
-    /* Servicios */
-    .servicios-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .servicio {
-      background: var(--blanco);
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: var(--sombra);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .servicio:hover {
-      transform: translateY(-5px);
-    }
-
-    .servicio-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .servicio h3 {
-      margin: 1rem 0 0.5rem;
-      color: var(--secundario);
-    }
-
-    /* Propiedades */
-    .propiedades-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .tarjeta-propiedad {
-      background: var(--blanco);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: var(--sombra);
-      transition: transform 0.3s;
-    }
-
-    .tarjeta-propiedad:hover {
-      transform: translateY(-5px);
-    }
-
-    .tarjeta-propiedad img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .info-propiedad {
-      padding: 1.5rem;
-    }
-
-    .info-propiedad h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .precio {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primario);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .ubicacion {
-      color: var(--texto-suave);
-      font-size: 0.9rem;
-      display: block;
-      margin-bottom: 1rem;
-    }
-
-    /* Sobre mí */
-    .sobre-contenido {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .sobre-imagen img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: var(--sombra);
-    }
-
-    .sobre-texto h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--secundario);
-    }
-
-    /* Testimonios */
-    .testimonios {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .testimonio {
-      background: var(--blanco);
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: var(--sombra);
-      font-style: italic;
-      text-align: center;
-    }
-
-    .testimonio img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-
-    .testimonio span {
-      display: block;
-      margin-top: 1rem;
-      font-style: normal;
-      font-weight: 700;
-      color: var(--primario);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--secundario);
-      color: #fff;
-      padding: 60px 0 20px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .footer-col h4 {
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-
-    .footer-col p,
-    .footer-col a {
-      color: #e0e0e0;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .footer-col a:hover {
-      color: var(--whatsapp);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .sobre-contenido {
-        grid-template-columns: 1fr;
-      }
-
-      .whatsapp-float {
-        bottom: 1rem;
-        right: 1rem;
-        padding: 12px 16px;
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FL Homes by Jess | Inicio</title>
+  <meta name="description" content="Compra, venta y renta de propiedades en Orlando, Florida con FL Homes by Jess." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Inicio FL Homes by Jess">
+        <span class="brand-mark">FL</span>
+        <span>Homes by Jess</span>
+      </a>
 
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <div class="logo"><img src="img/img3.jpeg" alt="FL Homes by Jess"></div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="propiedades.html">Propiedades</a></li>
-          <li><a href="sobre-mi.html">Sobre Mí</a></li>
-          <li><a href="valuacion.html">Valúa tu Propiedad</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="valuacion.html">Valuación</a>
+        <a href="contacto.html">Contacto</a>
       </nav>
+
+      <a href="contacto.html" class="btn btn-small">Agenda</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Tu Casa en Orlando con FL Homes by Jess</h1>
-      <p>Asesoría inmobiliaria independiente: compra, venta y renta de propiedades en Orlando, Florida.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">REALTOR® independiente en Orlando</p>
+          <h1>Tu casa en Orlando empieza con la asesoría correcta.</h1>
+          <p class="lead">Compra, vende o renta con confianza. FL Homes by Jess te acompaña en cada paso con estrategia, experiencia y atención personalizada.</p>
+          <div class="hero-actions">
+            <a href="propiedades.html" class="btn">Ver propiedades</a>
+            <a href="valuacion.html" class="btn btn-secondary">Valuación gratis</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="img/hero.svg" alt="Casa moderna en Orlando" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow accent">Servicios</p>
+          <h2>Nuestros servicios</h2>
+        </div>
+
+        <div class="card-grid three-col">
+          <article class="info-card">
+            <img src="img/service-1.svg" alt="Compra de propiedades" />
+            <h3>Compra de propiedades</h3>
+            <p>Te ayudamos a encontrar la propiedad ideal con asesoría clara, honesta y enfocada en tus objetivos.</p>
+          </article>
+
+          <article class="info-card">
+            <img src="img/service-2.svg" alt="Venta de inmuebles" />
+            <h3>Venta de inmuebles</h3>
+            <p>Vendemos tu propiedad con estrategia de marketing digital, presentación y visitas de compradores calificados.</p>
+          </article>
+
+          <article class="info-card">
+            <img src="img/service-3.svg" alt="Renta y alquiler" />
+            <h3>Renta y alquiler</h3>
+            <p>Buscamos opciones que se adapten a tu estilo de vida o encontramos inquilinos confiables para tu inmueble.</p>
+          </article>
+
+          <article class="info-card">
+            <img src="img/service-4.svg" alt="Valuación gratuita" />
+            <h3>Valuación gratuita</h3>
+            <p>Conoce el valor real de tu propiedad con una evaluación profesional, rápida y sin compromiso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow accent">Destacadas</p>
+          <h2>Propiedades destacadas</h2>
+        </div>
+
+        <div class="property-grid three-col">
+          <article class="property-card">
+            <img src="img/property-1.svg" alt="Casa familiar en Orlando" />
+            <div class="property-body">
+              <span class="price">$285,000</span>
+              <h3>Casa familiar en Orlando</h3>
+              <p class="location">📍 Orlando, FL</p>
+              <p>3 recámaras · 2 baños · 150 m²</p>
+              <a href="detalle.html" class="btn btn-block">Ver detalles</a>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <img src="img/property-2.svg" alt="Departamento moderno" />
+            <div class="property-body">
+              <span class="price">$185,000</span>
+              <h3>Departamento moderno</h3>
+              <p class="location">📍 Kissimmee, FL</p>
+              <p>2 recámaras · 2 baños · 95 m²</p>
+              <a href="detalle.html" class="btn btn-block">Ver detalles</a>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <img src="img/property-3.svg" alt="Terreno residencial" />
+            <div class="property-body">
+              <span class="price">$65,000</span>
+              <h3>Terreno residencial</h3>
+              <p class="location">📍 Davenport, FL</p>
+              <p>Lote listo para construir · 500 m²</p>
+              <a href="detalle.html" class="btn btn-block">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-split">
+        <div class="about-media">
+          <img src="img/about.svg" alt="Jess Realtor" />
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow accent">Sobre Jess</p>
+          <h2>Asesoría inmobiliaria clara y personalizada.</h2>
+          <p>Soy tu REALTOR® independiente en Orlando, Florida. Mi objetivo es brindarte una asesoría honesta, transparente y profesional en cada etapa del proceso.</p>
+          <p>Conozco el mercado local y trabajo para que compres, vendas o alquiles con total confianza.</p>
+          <a href="sobre-mi.html" class="btn">Conocer más</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow accent">Clientes</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+
+        <div class="testimonial-grid two-col">
+          <article class="testimonial">
+            <img src="img/testimonial-1.svg" alt="Cliente satisfecho" />
+            <p>“Excelente servicio, encontré mi casa ideal en pocas semanas. Jess me guió en cada paso.”</p>
+            <strong>— María G.</strong>
+          </article>
+
+          <article class="testimonial">
+            <img src="img/testimonial-2.svg" alt="Cliente satisfecho" />
+            <p>“Gracias a Jess vendí mi propiedad rápidamente y al mejor precio. Muy recomendada.”</p>
+            <strong>— Carlos R.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">¿Listo para comprar, vender o rentar?</p>
+          <h2>Agenda tu cita con FL Homes by Jess.</h2>
+        </div>
+        <a href="contacto.html" class="btn btn-whatsapp">Agendar por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div>
-        <a href="#propiedades" class="btn">Ver Propiedades Disponibles</a>
-        <a href="#valuacion" class="btn btn-outline" style="margin-left: 10px;">Solicitar Valuación Gratuita</a>
+        <h3>FL Homes by Jess</h3>
+        <p>REALTOR® Independiente en Orlando, Florida</p>
+        <p>Asesoría en compra, venta y renta.</p>
+      </div>
+
+      <div>
+        <p><a href="tel:+14074509293">📞 +1 (407) 450-9293</a></p>
+        <p><a href="mailto:flhomesbyjess@gmail.com">✉️ flhomesbyjess@gmail.com</a></p>
+        <p><a href="https://wa.me/14074509293" target="_blank" rel="noreferrer">💬 WhatsApp</a></p>
+      </div>
+
+      <div>
+        <p><a href="https://www.instagram.com/flhomesbyjess" target="_blank" rel="noreferrer">📸 Instagram: @flhomesbyjess</a></p>
+        <p><a href="https://linktr.ee/FlhomesbyJess" target="_blank" rel="noreferrer">🔗 Linktree</a></p>
       </div>
     </div>
-  </section>
 
-  <!-- Servicios -->
-  <section id="servicios">
-    <div class="container">
-      <h2 class="titulo-seccion">Nuestros Servicios</h2>
-      <div class="servicios-grid">
-        <div class="servicio">
-          <img src="./img/img2.jpeg" alt="Compra de propiedades" class="servicio-img">
-          <h3>🔑 Compra de Propiedades</h3>
-          <p>Te ayudamos a encontrar tu hogar ideal en Orlando con las mejores opciones del mercado.</p>
-        </div>
-        <div class="servicio">
-          <img src="./img/img3.jpeg" alt="Venta de inmuebles" class="servicio-img">
-          <h3>💰 Venta de Inmuebles</h3>
-          <p>Vendemos tu propiedad al mejor precio con estrategia de marketing digital y visitas calificadas.</p>
-        </div>
-        <div class="servicio">
-          <img src="./img/img4.jpeg" alt="Renta y alquiler" class="servicio-img">
-          <h3>🏘️ Renta y Alquiler</h3>
-          <p>Buscamos la propiedad perfecta para ti o encontramos inquilinos confiables para tu inmueble.</p>
-        </div>
-        <div class="servicio">
-          <img src="./img/img5.jpeg" alt="Valuación gratuita" class="servicio-img">
-          <h3>📊 Valuación Gratuita</h3>
-          <p>Solicita una tasación profesional de tu propiedad sin costo y conoce su valor real de mercado.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Propiedades destacadas -->
-  <section id="propiedades" style="background: var(--blanco);">
-    <div class="container">
-      <h2 class="titulo-seccion">Propiedades Destacadas</h2>
-      <div class="propiedades-grid">
-        
-        <article class="tarjeta-propiedad">
-          <img src="./img/img6.jpeg" alt="Casa en Orlando">
-          <div class="info-propiedad">
-            <span class="precio">$285,000</span>
-            <h3>Casa Familiar en Orlando</h3>
-            <span class="ubicacion">📍 Orlando, FL</span>
-            <p>3 recámaras · 2 baños · 150 m²</p>
-            <a href="detalle.html" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-        </article>
-
-        <article class="tarjeta-propiedad">
-          <img src="./img/img7.jpeg" alt="Departamento en Kissimmee">
-          <div class="info-propiedad">
-            <span class="precio">$185,000</span>
-            <h3>Departamento Moderno</h3>
-            <span class="ubicacion">📍 Kissimmee, FL</span>
-            <p>2 recámaras · 2 baños · 95 m²</p>
-            <a href="detalle.html" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-        </article>
-
-        <article class="tarjeta-propiedad">
-          <img src="./img/img8.jpeg" alt="Terreno en Davenport">
-          <div class="info-propiedad">
-            <span class="precio">$65,000</span>
-            <h3>Terreno Residencial</h3>
-            <span class="ubicacion">📍 Davenport, FL</span>
-            <p>Lote listo para construir · 500 m²</p>
-            <a href="detalle.html" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Sobre mí breve -->
-  <section id="sobre-mi">
-    <div class="container">
-      <div class="sobre-contenido">
-        <div class="sobre-imagen">
-          <img src="./img/img9.jpeg" alt="Jess Realtor">
-        </div>
-        <div class="sobre-texto">
-          <h2>Sobre Jess</h2>
-          <p>Soy tu <strong>REALTOR® independiente</strong> en Orlando, Florida. Mi objetivo es brindarte una asesoría honesta, personalizada y profesional en cada paso de tu proceso inmobiliario.</p>
-          <p>Conozco el mercado local y trabajo para que compres, vendas o rentes tu propiedad con total confianza.</p>
-          <a href="sobre-mi.html" class="btn">Conocer Más Sobre Mí</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section style="background: var(--blanco);">
-    <div class="container">
-      <h2 class="titulo-seccion">Lo que Dicen Nuestros Clientes</h2>
-      <div class="testimonios">
-        <div class="testimonio">
-          <img src="./img/img10.jpeg" alt="Cliente satisfecho">
-          <p>"Excelente servicio, encontré mi casa ideal en pocas semanas. Jess me guió en todo el proceso."</p>
-          <span>— María G., Compradora</span>
-        </div>
-        <div class="testimonio">
-          <img src="./img/img11.jpeg" alt="Cliente satisfecho">
-          <p>"Gracias a Jess vendí mi propiedad rápidamente y al mejor precio. Muy recomendada."</p>
-          <span>— Carlos R., Vendedor</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section id="valuacion" style="text-align: center; background: var(--secundario); color: #fff; padding: 80px 20px;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">¿Listo para Comprar, Vender o Rentar?</h2>
-    <p style="margin-bottom: 2rem; font-size: 1.2rem;">Agenda tu cita con FL Homes by Jess hoy mismo.</p>
-    <a href="contacto.html" class="btn" style="background: var(--whatsapp);">Agendar Cita por WhatsApp</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>FL Homes by Jess</h4>
-          <p>REALTOR® Independiente en Orlando, Florida</p>
-          <p>Asesoría en compra, venta y renta de propiedades.</p>
-        </div>
-        <div class="footer-col">
-          <p><a href="tel:+14074509293">📞 +1 (407) 450-9293</a></p>
-          <p><a href="mailto:flhomesbyjess@gmail.com">✉️ flhomesbyjess@gmail.com</a></p>
-          <p><a href="https://wa.me/14074509293" target="_blank">💬 WhatsApp</a></p>
-          <p>Lunes a domingo: 8:00 AM - 9:00 PM</p>
-        </div>
-        <div class="footer-col">
-          <h4>Síguenos</h4>
-          <p><a href="https://www.instagram.com/flhomesbyjess" target="_blank">📸 Instagram: @flhomesbyjess</a></p>
-          <p><a href="https://linktr.ee/FlhomesbyJess" target="_blank">🔗 Linktree</a></p>
-        </div>
-      </div>
-      <div class="copyright">
-        &copy; 2026 FL Homes by Jess. Todos los derechos reservados.
-      </div>
+    <div class="container footer-bottom">
+      <p>© 2026 FL Homes by Jess. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- WhatsApp flotante -->
-  <a href="https://wa.me/14074509293" target="_blank" class="whatsapp-float">
-    💬 Escríbenos por WhatsApp
-  </a>
-
+  <a href="https://wa.me/14074509293" class="floating-whatsapp" target="_blank" rel="noreferrer" aria-label="WhatsApp">💬</a>
 </body>
 </html>

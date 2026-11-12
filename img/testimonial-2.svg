@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">Testimonial 2</title>
+  <desc id="desc">Client avatar illustration.</desc>
+  <rect width="180" height="180" rx="90" fill="#dfeaf8"/>
+  <circle cx="90" cy="62" r="32" fill="#f4caa5"/>
+  <rect x="46" y="96" width="88" height="58" rx="24" fill="#c0d5ed"/>
+</svg>

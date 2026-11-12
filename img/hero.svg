@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="title desc">
+  <title id="title">Hero image</title>
+  <desc id="desc">Modern family home illustration in Orlando.</desc>
+  <rect width="800" height="560" fill="#dfe9f2"/>
+  <rect y="300" width="800" height="260" fill="#bdd7b3"/>
+  <rect x="70" y="200" width="420" height="230" rx="12" fill="#ffffff"/>
+  <polygon points="70,200 290,80 490,200" fill="#d6e0ee"/>
+  <rect x="110" y="240" width="110" height="120" fill="#c9d6e5"/>
+  <rect x="245" y="240" width="110" height="120" fill="#c9d6e5"/>
+  <rect x="325" y="240" width="120" height="120" fill="#d2e0c1"/>
+  <rect x="470" y="150" width="230" height="280" rx="12" fill="#f8f3ea"/>
+  <rect x="500" y="190" width="170" height="150" rx="10" fill="#d2e0c1"/>
+  <rect x="530" y="220" width="50" height="90" fill="#ffffff"/>
+  <rect x="595" y="220" width="50" height="90" fill="#ffffff"/>
+  <circle cx="664" cy="120" r="46" fill="#f7d29d"/>
+  <rect x="634" y="160" width="60" height="58" rx="25" fill="#8dbb8d"/>
+  <text x="410" y="470" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1d5f24">FL Homes by Jess</text>
+</svg>
