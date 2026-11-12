@@ -1,81 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detalle de propiedad | FL Homes by Jess</title>
-  <meta name="description" content="Detalle de propiedad en Orlando, Florida con FL Homes by Jess." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Propiedad | FL Homes by Jess</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand" aria-label="Inicio FL Homes by Jess">
-        <span class="brand-mark">FL</span>
-        <span>Homes by Jess</span>
-      </a>
 
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a href="propiedades.html">Propiedades</a>
-        <a href="sobre-mi.html">Sobre mí</a>
-        <a href="valuacion.html">Valuación</a>
-        <a href="contacto.html">Contacto</a>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo"><img src="img/img3.jpeg" alt="FL Homes by Jess"></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propiedades.html">Propiedades</a></li>
+          <li><a href="sobre-mi.html">Sobre Mí</a></li>
+          <li><a href="valuacion.html">Valúa tu Propiedad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
       </nav>
-
-      <a href="contacto.html" class="btn btn-small">Agenda</a>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero small-hero">
-      <div class="container">
-        <p class="eyebrow accent">Propiedad</p>
-        <h1>Casa familiar en Orlando</h1>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container detail-layout">
-        <div class="detail-gallery">
-          <img src="img/property-1.svg" alt="Casa familiar" />
+  <!-- Detalle de propiedad -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="detalle-contenido">
+        <div>
+          <img src="img/img8.jpeg" alt="Casa en Orlando - Detalle">
         </div>
 
-        <div class="detail-info">
-          <span class="price detail-price">$285,000</span>
-          <p class="location">📍 Orlando, FL</p>
-          <ul class="feature-list">
+        <div>
+          <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--secundario);">Casa Familiar en Orlando</h1>
+          <span class="detalle-precio">$285,000 USD</span>
+          <p style="color: var(--texto-suave); margin-bottom: 2rem; font-size: 1.1rem;">📍 Orlando, Florida · 3 recámaras · 2 baños · 2 garajes · 150 m²</p>
+          
+          <h3 style="margin-bottom: 1rem; color: var(--secundario);">Descripción</h3>
+          <p style="margin-bottom: 1.5rem;">Hermosa casa familiar en una de las mejores zonas de Orlando. Con acabados modernos, cocina abierta, patio trasero y cercano a escuelas, centros comerciales y parques temáticos. Ideal para familias que buscan comodidad y plusvalía.</p>
+          
+          <h3 style="margin-bottom: 1rem; color: var(--secundario);">Características principales</h3>
+          <ul style="margin-bottom: 2rem; margin-left: 1.5rem; color: var(--texto-suave);">
             <li>3 recámaras</li>
-            <li>2 baños</li>
-            <li>150 m²</li>
+            <li>2 baños completos</li>
+            <li>Cocina equipada</li>
+            <li>Sala y comedor</li>
             <li>Patio trasero</li>
-            <li>Estacionamiento</li>
-            <li>Zona residencial</li>
+            <li>2 espacios de garaje</li>
+            <li>Aire acondicionado central</li>
           </ul>
-          <p>Excelente oportunidad para familias que buscan un hogar cómodo y bien ubicado, cerca de escuelas, centros comerciales y accesos principales.</p>
-          <a href="contacto.html" class="btn">Solicitar información</a>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>FL Homes by Jess</h3>
-        <p>Tu próximo hogar en Orlando.</p>
-      </div>
-      <div>
-        <p><a href="tel:+14074509293">📞 +1 (407) 450-9293</a></p>
-        <p><a href="mailto:flhomesbyjess@gmail.com">✉️ flhomesbyjess@gmail.com</a></p>
-      </div>
-      <div>
-        <p><a href="https://wa.me/14074509293" target="_blank" rel="noreferrer">💬 WhatsApp</a></p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="https://wa.me/14074509293?text=Hola Jess, me interesa la propiedad Casa Familiar en Orlando ($285,000)" target="_blank" class="btn" style="flex: 1;">📲 Consultar por WhatsApp</a>
+            <a href="contacto.html" class="btn btn-outline" style="flex: 1;">Agendar Visita</a>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 FL Homes by Jess.</p>
+  </section>
+
+  <!-- Más propiedades -->
+  <section style="background: var(--fondo); padding: 60px 0;">
+    <div class="container">
+      <h2 class="titulo-seccion" style="margin-bottom: 3rem;">Más Propiedades</h2>
+      <div class="propiedades-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <article class="tarjeta-propiedad">
+          <img src="img/img9.jpeg" alt="Propiedad A">
+          <div class="info-propiedad">
+            <span class="precio">$185,000</span>
+            <h3 style="font-size: 1.1rem;">Departamento Kissimmee</h3>
+            <span class="ubicacion">📍 Kissimmee, FL</span>
+            <a href="#" class="btn" style="width: 100%; padding: 8px; font-size: 0.9rem;">Ver Detalle</a>
+          </div>
+        </article>
+        <article class="tarjeta-propiedad">
+          <img src="img/img10.jpeg" alt="Propiedad B">
+          <div class="info-propiedad">
+            <span class="precio">$210,000</span>
+            <h3 style="font-size: 1.1rem;">Condominio Lake Nona</h3>
+            <span class="ubicacion">📍 Orlando, FL</span>
+            <a href="#" class="btn" style="width: 100%; padding: 8px; font-size: 0.9rem;">Ver Detalle</a>
+          </div>
+        </article>
+        <article class="tarjeta-propiedad">
+          <img src="img/img11.jpeg" alt="Propiedad C">
+          <div class="info-propiedad">
+            <span class="precio">$65,000</span>
+            <h3 style="font-size: 1.1rem;">Terreno Davenport</h3>
+            <span class="ubicacion">📍 Davenport, FL</span>
+            <a href="#" class="btn" style="width: 100%; padding: 8px; font-size: 0.9rem;">Ver Detalle</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>FL Homes by Jess</h4>
+          <p>REALTOR® Independiente en Orlando, Florida</p>
+        </div>
+        <div class="footer-col">
+          <p><a href="tel:+14074509293">📞 +1 (407) 450-9293</a></p>
+          <p><a href="mailto:flhomesbyjess@gmail.com">✉️ flhomesbyjess@gmail.com</a></p>
+        </div>
+        <div class="footer-col">
+          <p><a href="https://www.instagram.com/flhomesbyjess" target="_blank">📸 Instagram</a></p>
+          <p><a href="https://linktr.ee/FlhomesbyJess" target="_blank">🔗 Linktree</a></p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 FL Homes by Jess. Todos los derechos reservados.
+      </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/14074509293" target="_blank" class="whatsapp-float">
+    💬 WhatsApp
+  </a>
+
 </body>
 </html>
